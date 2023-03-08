@@ -210,6 +210,13 @@ const Sidebar = () => {
               selected={selected}
               setSelected={setSelected}
             />
+            <Item
+              title="News"
+              to="/news"
+              icon={<TimelineOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
           </Box>
         </Menu>
       </ProSidebar>
