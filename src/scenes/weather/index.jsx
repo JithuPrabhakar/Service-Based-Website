@@ -27,13 +27,13 @@ const Weather = () => {
     return (
         <div className="m-5">
             <Header title="WEATHER" subtitle="Current Weather Data" />
-            <div className="search text-center p-4">
+            <div className="search text-center p-4 my-5">
                 <input type="text"
                     value={location}
                     onChange={e => setLocation(e.target.value)}
                     onKeyUp={searchLocation}
                     placeholder="Enter Location"
-                    className='py-3 px-6 text-xl rounded-3xl border border-solid border-white'
+                    className='py-3 px-6 text-xl text-black rounded-3xl border border-solid border-black'
                 />
             </div>
             <div className="container max-w-2xl h-fit m-auto px-4 flex flex-col justify-between">
@@ -50,7 +50,7 @@ const Weather = () => {
                 </div>
 
                 {data.name !== undefined &&
-                    <div className="bottom flex justify-between text-center w-full my-4 mx-auto p-4 rounded-xl bg-[rgba(255,255,255,0.2)]">
+                    <div className="bottom flex justify-between text-center w-full my-4 mx-auto p-4">
                         <div className="feels">
                             <p className="text-2xl">Feels Like</p>
                             {data.main ? <p className="text-2xl font-bold">{data.main.feels_like.toFixed()}°C</p> : null}
