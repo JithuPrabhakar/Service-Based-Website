@@ -12,6 +12,7 @@ import FAQ from "./scenes/faq";
 import Bar from "./scenes/bar";
 import Line from "./scenes/line";
 import Weather from "./scenes/weather";
+import News from "./scenes/news";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -34,6 +35,7 @@ function App() {
               <Route path='/bar' element={<Bar />} />
               <Route path='/line' element={<Line />} />
               <Route path='/weather' element={<Weather />} />
+              <Route path='/news' element={<News />} />
             </Routes>
           </main>
         </div>;
