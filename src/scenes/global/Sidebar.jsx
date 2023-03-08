@@ -14,6 +14,9 @@ import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 import BarChartOutlinedIcon from "@mui/icons-material/BarChartOutlined";
 import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
+import CloudOutlinedIcon from '@mui/icons-material/CloudOutlined';
+import NewspaperOutlinedIcon from '@mui/icons-material/NewspaperOutlined';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
@@ -118,7 +121,7 @@ const Sidebar = () => {
           <Box paddingLeft={isCollapsed ? undefined : "10%"}>
             <Item
               title="Dashboard"
-              to="/"
+              to="/home"
               icon={<HomeOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
@@ -161,16 +164,9 @@ const Sidebar = () => {
               Pages
             </Typography>
             <Item
-              title="Profile Form"
+              title="Contact Us"
               to="/form"
               icon={<PersonOutlinedIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-            <Item
-              title="Calendar"
-              to="/calendar"
-              icon={<CalendarTodayOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
@@ -203,17 +199,39 @@ const Sidebar = () => {
               selected={selected}
               setSelected={setSelected}
             />
+
+            <Typography
+              variant="h6"
+              color={colors.grey[300]}
+              sx={{ m: "15px 0 5px 20px" }}
+            >
+              APIs
+            </Typography>
             <Item
               title="Weather"
               to="/weather"
-              icon={<TimelineOutlinedIcon />}
+              icon={<CloudOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
               title="News"
               to="/news"
-              icon={<TimelineOutlinedIcon />}
+              icon={<NewspaperOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            <Typography
+              variant="h6"
+              color={colors.grey[300]}
+              sx={{ m: "15px 0 5px 20px" }}
+            >
+              Logout
+            </Typography>
+            <Item
+              title="Logout"
+              to="/"
+              icon={<LogoutIcon />}
               selected={selected}
               setSelected={setSelected}
             />

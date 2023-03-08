@@ -13,6 +13,7 @@ import Bar from "./scenes/bar";
 import Line from "./scenes/line";
 import Weather from "./scenes/weather";
 import News from "./scenes/news";
+import Auth from "./Auth";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -26,7 +27,8 @@ function App() {
           <main className="content">
             <Topbar />
             <Routes>
-              <Route path='/' element={<Dashboard />} />
+              <Route path='/' element={<Auth />} />
+              <Route path='/home' element={<Dashboard />} />
               <Route path='/team' element={<Team />} />
               <Route path='/contacts' element={<Contacts />} />
               <Route path='/invoices' element={<Invoices />} />
